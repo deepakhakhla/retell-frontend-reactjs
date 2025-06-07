@@ -1,8 +1,8 @@
 const fetch = require('node-fetch');
 
 export default async function handler(req, res) {
-  const { agent_b50cbebd31c36a0bddfa8122e5 } = req.body;
-  const key_c20a1964b35b75ee439aa25ddbbc = process.env.RETELL_API;
+  const { agentId } = req.body;
+  const apiKey = process.env.RETELL_API;
   const sampleRate = parseInt(process.env.RETELL_SAMPLE_RATE || '16000', 10);
 
   console.log('Using Agent ID:', agentId);
